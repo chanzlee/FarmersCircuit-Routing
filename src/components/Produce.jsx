@@ -272,13 +272,32 @@ const availableProduce = [
 
 function Produce(){
   return(
-    <div className='col-md-6'>
-      {availableProduce.map((item, index) =>
-            <Month
-              month={item.month}
-              selection={item.selection}
-              key={index}/>
-      )}
+    <div className='col-md-9'>
+      <style jsx>{`
+        div.style2 {
+          background-color: rgb(255, 204, 153, .7);
+          border: 10px solid darkgreen;
+          padding: 50px;
+          margin-top: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px black;
+          margin: 10px;
+          padding: 10px;
+        }
+        h2 {
+          text-align: center;
+          padding: 10px 0;
+        }
+      `}</style>
+      <div className="style2">
+        <h2 className="marketFont">SEASONAL PRODUCE</h2>
+        {availableProduce.map((item, index) =>
+          <Month
+            month={item.month}
+            selection={item.selection}
+            key={index}/>
+        )}
+      </div>
     </div>
   );
 }

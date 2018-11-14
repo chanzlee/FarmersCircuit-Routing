@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Location(props){
   return(
     <div>
-      <h5>{props.day}</h5>
+      <h5 className="marketFont">{props.day}</h5>
       <h6>{props.location}</h6>
       <h6>{props.hours}</h6>
       <h6>{props.booth}</h6>
