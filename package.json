@@ -12,6 +12,7 @@
   "author": "Kenneth Du & Chris Crow",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "css-loader": "^1.0.1",
     "firebase": "^3.0.0",
     "moment": "^2.18.1",

@@ -5,8 +5,14 @@ import PropTypes from 'prop-types';
 function Month(props){
   return(
     <div>
-      <h2>{props.month}</h2>
-      <h4>{props.selection}</h4>
+      <h5>{props.month}</h5>
+      <ul>
+        {props.selection.map((produce, index) =>
+          <li key={index}>
+            {produce}
+          </li>         
+        )}
+      </ul>
     </div>
   );
 }
@@ -14,8 +20,6 @@ function Month(props){
 Month.propTypes = {
   month: PropTypes.string,
   selection: PropTypes.string
-}
-
-
+};
 
 export default Month;
