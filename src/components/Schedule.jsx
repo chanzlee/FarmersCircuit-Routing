@@ -42,9 +42,11 @@ const marketSchedule = [
 
 function Schedule(){
   return(
-    <div className='col-md-3'>
+    <div className="d-flex justify-content-center">
+    <div className='col-md-6'>
       <style jsx>{`
       div.style {
+        text-align: center;
         background-color: rgb(255, 204, 153, .7);
         border: 10px solid darkred;
         margin: 
@@ -67,6 +69,7 @@ function Schedule(){
             key={index}/>
         )}
       </div>
+    </div>
     </div>
   );
 }

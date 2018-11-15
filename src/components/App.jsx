@@ -1,6 +1,9 @@
 import React from 'react';
 import Schedule from './Schedule';
 import Produce from './Produce';
+import { Switch, Route, Link } from 'react-router-dom';
+import Home from "./Home"
+
 
 function App(){
   return(
@@ -29,12 +32,19 @@ function App(){
           font-size: 200%;
         }
       `} </style>
-      <h1>Avery's Organics</h1>
-      <div className="row">
-        <Schedule/>
-        <Produce/>
+      <div>
+        <div>
+        <h1>Avery's Organics</h1>
+          <Link to="/">Home</Link> | <Link to="/schedules">View Schedules</Link> | <Link to="/produces">View Seasonal Produces</Link>
+        </div>
+        <Switch>
+          <Route path='/schedules' component={Schedule} />
+          <Route path='/produces' component={Produce} />
+          <Route exact path='/' component={Home} />
+        </Switch>
       </div>
     </div>
+      
   );
 }
 

@@ -272,6 +272,7 @@ const availableProduce = [
 
 function Produce(){
   return(
+    <div className="d-flex justify-content-center">
     <div className='col-md-9'>
       <style jsx>{`
         div.style2 {
@@ -298,6 +299,7 @@ function Produce(){
             key={index}/>
         )}
       </div>
+    </div>
     </div>
   );
 }
